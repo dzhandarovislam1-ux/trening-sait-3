@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath,
   trailingSlash: true,
-  images: { unoptimized: true },
+  images: { loader: "custom", loaderFile: "./lib/image-loader.ts" },
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
   experimental: {
     agentFeedback: true,

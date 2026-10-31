@@ -255,7 +255,6 @@ function Hero() {
                   src={`${BASE}/images/aerial-front.webp`}
                   alt="ЖК «Новый Терек» — вид на квартал с высоты"
                   fill
-                  preload
                   sizes="(min-width: 768px) 800px, 100vw"
                   className="object-cover"
                 />
