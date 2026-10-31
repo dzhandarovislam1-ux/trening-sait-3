@@ -1,0 +1,8 @@
+:HL["/trening-sait-3/_next/static/chunks/2-cbk0z-6aql9.css","style"]
+:HL["/trening-sait-3/_next/static/media/1361b9baaefe9807-s.p.1d_6dtvtn9g3_.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/trening-sait-3/_next/static/media/276a8f4fe816cb6b-s.p.2v2sz4qlut9s1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/trening-sait-3/_next/static/media/65341aea9fb91af5-s.p.1dqa_6e_ad4sj.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/trening-sait-3/_next/static/media/82450a180bcad83c-s.p.0p-wng2nn8o-p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"consent","h":96,"c":"$Q2"}]]
+0:{"b":"bpfvgXYAtB4_4wY5DMptx","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
