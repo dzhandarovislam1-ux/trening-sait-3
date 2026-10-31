@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import { BASE } from "@/lib/data";
+import { CookieBanner } from "@/components/cookie-banner";
 
 const display = Montserrat({
   variable: "--font-display",
@@ -47,7 +48,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

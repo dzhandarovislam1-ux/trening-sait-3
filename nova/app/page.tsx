@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Header, Logo } from "@/components/header";
 import { RevealObserver } from "@/components/reveal-observer";
 import { Starfield } from "@/components/starfield";
@@ -27,7 +28,7 @@ import {
   Wallet,
   WhatsApp,
 } from "@/components/icons";
-import { BASE, company, faq, prices, waLink } from "@/lib/data";
+import { BASE, company, faq, permit, prices, waLink } from "@/lib/data";
 
 // ул. Шаповалова, 15Б — coordinates from Yandex Maps (lon,lat).
 // A plain placemark instead of a text search, so no organisation card pops up.
@@ -819,7 +820,14 @@ function Footer() {
           <div>
             <p className="font-semibold">Застройщик</p>
             <p className="mt-2 leading-relaxed text-muted">
-              {company.legal}. {company.project}, {company.city}.
+              {company.fullLegal}
+              <br />
+              ИНН {company.inn} · ОГРН {company.ogrn}
+              <br />
+              Юр. адрес: {company.legalAddress}
+            </p>
+            <p className="mt-3 leading-relaxed text-muted">
+              Разрешение на строительство <span className="whitespace-nowrap">№ {permit.number}</span> от {permit.date}
             </p>
           </div>
           <div>
@@ -837,6 +845,17 @@ function Footer() {
         <div className="mt-12 flex flex-col justify-between gap-3 border-t border-line pt-6 text-xs text-white/40 md:flex-row">
           <p>© 2026 {company.legal}. Все права защищены.</p>
           <p>Информация на сайте носит справочный характер и не является публичной офертой.</p>
+        </div>
+        <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs text-white/40">
+          <Link href="/privacy/" className="underline hover:text-white">
+            Политика обработки персональных данных
+          </Link>
+          <Link href="/consent/" className="underline hover:text-white">
+            Согласие на обработку персональных данных
+          </Link>
+          <a href={`mailto:${company.email}`} className="hover:text-white">
+            {company.email}
+          </a>
         </div>
         <p className="mt-3 text-xs text-white/40">
           * Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой в РФ.
