@@ -337,7 +337,7 @@ function About() {
     return (
       <div
         data-reveal
-        style={{ ...d(i * 90), ["--r" as string]: c.r }}
+        style={{ ...d(i * 90), ["--r" as string]: c.r, ["--rm" as string]: i % 2 ? "4deg" : "-4deg" }}
         className={`tilt card flex flex-col items-center px-6 py-8 text-center lg:w-[270px] ${c.blue ? "card-blue" : ""}`}
       >
         <span className={`tile3d ${c.blue ? "tile3d-dark" : ""}`}>

@@ -39,11 +39,11 @@ export function Gallery() {
               sizes="(min-width: 768px) 66vw, 100vw"
               className="object-cover transition duration-[1.2s] ease-out group-hover:scale-105"
             />
-            <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-            <span className="absolute bottom-4 left-4 right-16 translate-y-2 text-left text-sm font-semibold opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+            <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100 [@media(hover:none)]:opacity-100" />
+            <span className="absolute bottom-4 left-4 right-16 translate-y-2 text-left text-sm font-semibold opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
               {g.alt}
             </span>
-            <span className="absolute bottom-4 right-4 grid size-10 place-items-center rounded-full bg-white text-bg opacity-0 transition duration-500 group-hover:opacity-100">
+            <span className="absolute bottom-4 right-4 grid size-10 place-items-center rounded-full bg-white text-bg opacity-0 transition duration-500 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
               <Plus className="size-4" />
             </span>
           </button>

@@ -327,6 +327,24 @@ body {
   }
 }
 
+/* Touch screens have no hover, so tilted cards straighten as they scroll in. */
+@media (max-width: 1023px) {
+  .js .tilt[data-reveal] {
+    rotate: var(--rm, 0deg);
+    scale: 0.92;
+    transition:
+      opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      translate 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      rotate 1.2s cubic-bezier(0.2, 0.7, 0.2, 1),
+      scale 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--d, 0ms);
+  }
+  .js .tilt[data-reveal].is-in {
+    rotate: none;
+    scale: none;
+  }
+}
+
 /* ---------- Animations ---------- */
 
 @keyframes twinkle {
@@ -402,7 +420,7 @@ body {
   }
 }
 
-/* ---------- Tilted cards (desktop only) ---------- */
+/* ---------- Tilted cards (desktop; touch version sits next to the reveal rules) ---------- */
 
 @media (min-width: 1024px) {
   .tilt {
@@ -465,15 +483,27 @@ details[open] .faq-icon {
   display: none;
 }
 
+/* Reduced motion: no movement, but blocks still fade in softly. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation: none !important;
-    transition: none !important;
   }
   .js [data-reveal] {
-    opacity: 1;
-    translate: 0 0;
+    translate: none !important;
+    rotate: none !important;
+    scale: none !important;
+    transition: opacity 0.8s ease !important;
+    transition-delay: var(--d, 0ms) !important;
+  }
+  [data-intro] {
+    animation: intro-fade 0.8s ease both !important;
+    animation-delay: var(--d, 0ms) !important;
+  }
+}
+@keyframes intro-fade {
+  from {
+    opacity: 0;
   }
 }

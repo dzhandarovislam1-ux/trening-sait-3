@@ -65,7 +65,7 @@ export function Plans() {
               <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1.5 text-xs font-bold backdrop-blur">
                 {p.rooms}-комн.
               </span>
-              <span className="absolute right-3 top-3 grid size-10 place-items-center rounded-full bg-white text-bg opacity-0 transition group-hover:opacity-100">
+              <span className="absolute right-3 top-3 grid size-10 place-items-center rounded-full bg-white text-bg opacity-0 transition group-hover:opacity-100 [@media(hover:none)]:opacity-100">
                 <ArrowUpRight className="size-4" />
               </span>
             </button>
