@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import { waLink } from "@/lib/data";
+import { BASE, waLink } from "@/lib/data";
 import { Check, WhatsApp } from "./icons";
 
 const options = ["1-комнатная", "2-комнатная", "3-комнатная", "Пока не решил(а)"];
@@ -62,13 +61,13 @@ export function LeadForm() {
         </span>
         <span>
           Я даю{" "}
-          <Link href="/consent/" target="_blank" className="text-white underline">
+          <a href={`${BASE}/consent/`} target="_blank" className="text-white underline">
             согласие на обработку персональных данных
-          </Link>{" "}
+          </a>{" "}
           и ознакомлен(а) с{" "}
-          <Link href="/privacy/" target="_blank" className="text-white underline">
+          <a href={`${BASE}/privacy/`} target="_blank" className="text-white underline">
             политикой обработки данных
-          </Link>
+          </a>
         </span>
       </label>
 

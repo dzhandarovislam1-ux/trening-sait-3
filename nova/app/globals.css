@@ -120,6 +120,13 @@ body {
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
   }
+  @media (max-width: 767px) {
+    .glass {
+      background: rgba(14, 14, 30, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  }
 
   .text-gradient {
     background: linear-gradient(95deg, #b4b6ff 0%, #8487ff 50%, #6a6dff 100%);
@@ -302,9 +309,22 @@ body {
     translate 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
   transition-delay: var(--d, 0ms);
 }
+/* `none`, not `0 0`: any translate value would trap position:fixed descendants. */
 .js [data-reveal].is-in {
   opacity: 1;
-  translate: 0 0;
+  translate: none;
+}
+
+/* Above-the-fold content animates in with pure CSS so it never waits for JS. */
+[data-intro] {
+  animation: intro 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes intro {
+  from {
+    opacity: 0;
+    translate: 0 28px;
+  }
 }
 
 /* ---------- Animations ---------- */
@@ -322,6 +342,7 @@ body {
   display: flex;
   width: max-content;
   animation: marquee 40s linear infinite;
+  will-change: transform;
 }
 @keyframes marquee {
   to {
@@ -331,6 +352,8 @@ body {
 
 .beam-sway {
   animation: sway 9s ease-in-out infinite alternate;
+  /* Own layer: the blur is rasterised once instead of every frame. */
+  will-change: transform, opacity;
 }
 @keyframes sway {
   from {

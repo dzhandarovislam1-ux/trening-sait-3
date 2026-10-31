@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { LegalPage, Operator, Section } from "@/components/legal-page";
-import { company } from "@/lib/data";
+import { BASE, company } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Политика обработки персональных данных — ЖК «Новый Терек»",
@@ -46,9 +45,9 @@ export default function PrivacyPage() {
       <Section n={5} title="Правовое основание">
         <p>
           Обработка ведётся на основании{" "}
-          <Link href="/consent/" className="text-blue-bright underline">
+          <a href={`${BASE}/consent/`} className="text-blue-bright underline">
             согласия субъекта персональных данных
-          </Link>{" "}
+          </a>{" "}
           (п. 1 ч. 1 ст. 6 Федерального закона № 152-ФЗ), которое пользователь даёт перед отправкой заявки.
         </p>
       </Section>

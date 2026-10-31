@@ -13,7 +13,7 @@ const display = Montserrat({
 const sans = Manrope({
   variable: "--font-sans",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -44,7 +44,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Hide reveal-on-scroll blocks only when JS is running */}
         <script
           dangerouslySetInnerHTML={{
-            __html: "document.documentElement.classList.add('js')",
+            __html:
+              "document.documentElement.classList.add('js');if('scrollRestoration' in history)history.scrollRestoration='manual'",
           }}
         />
       </head>

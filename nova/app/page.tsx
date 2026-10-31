@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Header, Logo } from "@/components/header";
 import { RevealObserver } from "@/components/reveal-observer";
 import { Starfield } from "@/components/starfield";
@@ -149,22 +148,22 @@ function Hero() {
       </div>
 
       <div className="container-x text-center">
-        <div data-reveal className="eyebrow">
+        <div data-intro className="eyebrow">
           Шелковская · от застройщика {company.name}
         </div>
         <h1
-          data-reveal
+          data-intro
           style={d(100)}
           className="font-display mx-auto mt-7 max-w-4xl text-[clamp(40px,7vw,84px)] font-medium leading-[1.04]"
         >
           <span className="text-gradient inline-block">Новый Терек</span>
           <span className="mt-3 block text-balance text-[0.6em] leading-[1.15]">Квартиры, в которых хочется жить</span>
         </h1>
-        <p data-reveal style={d(200)} className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
+        <p data-intro style={d(200)} className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
           Кирпичный дом рядом со школой, детским садом, мечетью и парком. Сдача — IV квартал 2026 года. Исламская рассрочка до{" "}
           {prices.months} месяцев.
         </p>
-        <div data-reveal style={d(300)} className="mt-10 flex flex-wrap justify-center gap-4">
+        <div data-intro style={d(300)} className="mt-10 flex flex-wrap justify-center gap-4">
           <a href="#plans" className="btn btn-primary">
             Выбрать квартиру
           </a>
@@ -178,9 +177,9 @@ function Hero() {
       <div className="container-x relative mt-16 md:mt-20">
         <div className="glow left-1/2 top-10 h-64 w-3/4 -translate-x-1/2 bg-blue/40" />
         <div
-          data-reveal
+          data-intro
           style={d(400)}
-          className="relative mx-auto max-w-[1080px] rounded-[32px] border border-line-strong bg-white/[.03] p-2 shadow-[0_40px_120px_-40px_rgba(68,70,245,.7)] backdrop-blur"
+          className="relative mx-auto max-w-[1080px] rounded-[32px] border border-line-strong bg-white/[.03] p-2 shadow-[0_40px_120px_-40px_rgba(68,70,245,.7)] md:backdrop-blur"
         >
           <div className="card rounded-[26px] p-4 md:p-6">
             {/* Top bar */}
@@ -847,12 +846,12 @@ function Footer() {
           <p>Информация на сайте носит справочный характер и не является публичной офертой.</p>
         </div>
         <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-xs text-white/40">
-          <Link href="/privacy/" className="underline hover:text-white">
+          <a href={`${BASE}/privacy/`} className="underline hover:text-white">
             Политика обработки персональных данных
-          </Link>
-          <Link href="/consent/" className="underline hover:text-white">
+          </a>
+          <a href={`${BASE}/consent/`} className="underline hover:text-white">
             Согласие на обработку персональных данных
-          </Link>
+          </a>
           <a href={`mailto:${company.email}`} className="hover:text-white">
             {company.email}
           </a>

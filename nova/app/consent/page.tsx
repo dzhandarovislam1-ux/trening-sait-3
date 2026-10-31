@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { LegalPage, Operator, Section } from "@/components/legal-page";
-import { company } from "@/lib/data";
+import { BASE, company } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Согласие на обработку персональных данных — ЖК «Новый Терек»",
@@ -56,9 +55,9 @@ export default function ConsentPage() {
 
       <p>
         Подробнее — в{" "}
-        <Link href="/privacy/" className="text-blue-bright underline">
+        <a href={`${BASE}/privacy/`} className="text-blue-bright underline">
           Политике обработки персональных данных
-        </Link>
+        </a>
         .
       </p>
     </LegalPage>

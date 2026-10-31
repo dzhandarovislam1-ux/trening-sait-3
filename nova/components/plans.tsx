@@ -81,7 +81,7 @@ export function Plans() {
                 </div>
                 <div className="text-right">
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted">от</p>
-                  <p className="text-xl font-extrabold text-terra">{rub(p.area * prices.cash)}</p>
+                  <p className="text-xl font-bold text-terra">{rub(p.area * prices.cash)}</p>
                 </div>
               </div>
 
