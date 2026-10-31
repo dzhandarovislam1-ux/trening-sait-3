@@ -16,7 +16,7 @@ import {
   Door,
   Family,
   Home as HomeIcon,
-  Instagram,
+  AtSign,
   Mosque,
   Phone,
   Pin,
@@ -155,8 +155,8 @@ function Hero() {
           style={d(100)}
           className="font-display mx-auto mt-7 max-w-4xl text-[clamp(40px,7vw,84px)] font-medium leading-[1.04]"
         >
-          <span className="text-gradient">Новый Терек</span> — дом,
-          <br className="max-sm:hidden" /> в который скоро въезжать
+          <span className="text-gradient">Новый Терек</span> — квартиры,
+          <br className="max-sm:hidden" /> в которых хочется жить
         </h1>
         <p data-reveal style={d(200)} className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
           Кирпичный дом рядом со школой, мечетью и парком. Сдача — IV квартал 2026 года. Исламская рассрочка до{" "}
@@ -211,10 +211,10 @@ function Hero() {
                   href={company.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Instagram"
+                  aria-label="Наша страница в соцсети"
                   className="grid size-9 place-items-center rounded-full border border-line-strong hover:bg-white/10"
                 >
-                  <Instagram className="size-4" />
+                  <AtSign className="size-4" />
                 </a>
               </div>
             </div>
@@ -756,11 +756,11 @@ function Contacts() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 rounded-2xl border border-line bg-white/[.04] p-4 transition hover:bg-white/[.08]"
                 >
-                  <span className="grid size-11 place-items-center rounded-xl bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white">
-                    <Instagram />
+                  <span className="tile3d tile3d-dark !size-11 !rounded-xl">
+                    <AtSign className="size-5" />
                   </span>
                   <span>
-                    <span className="block text-xs font-semibold text-white/60">Instagram</span>
+                    <span className="block text-xs font-semibold text-white/60">Instagram*</span>
                     <span className="text-lg font-bold">@{company.instagram}</span>
                   </span>
                 </a>
@@ -836,6 +836,9 @@ function Footer() {
           <p>© 2026 {company.legal}. Все права защищены.</p>
           <p>Информация на сайте носит справочный характер и не является публичной офертой.</p>
         </div>
+        <p className="mt-3 text-xs text-white/40">
+          * Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой в РФ.
+        </p>
       </div>
     </footer>
   );

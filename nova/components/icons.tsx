@@ -34,11 +34,10 @@ export const WhatsApp = ({ className = "size-5" }: P) => (
   </svg>
 );
 
-export const Instagram = ({ className = "size-5" }: P) => (
+export const AtSign = ({ className = "size-5" }: P) => (
   <svg {...base} className={className}>
-    <rect x="3" y="3" width="18" height="18" rx="5" />
     <circle cx="12" cy="12" r="4" />
-    <circle cx="17.5" cy="6.5" r=".6" fill="currentColor" />
+    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" />
   </svg>
 );
 
