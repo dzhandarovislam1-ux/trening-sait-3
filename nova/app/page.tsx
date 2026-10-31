@@ -9,6 +9,7 @@ import { LeadForm } from "@/components/lead-form";
 import {
   ArrowRight,
   ArrowUpRight,
+  Blocks,
   Calendar,
   Check,
   Clock,
@@ -159,7 +160,7 @@ function Hero() {
           <span className="mt-3 block text-balance text-[0.6em] leading-[1.15]">Квартиры, в которых хочется жить</span>
         </h1>
         <p data-reveal style={d(200)} className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
-          Кирпичный дом рядом со школой, мечетью и парком. Сдача — IV квартал 2026 года. Исламская рассрочка до{" "}
+          Кирпичный дом рядом со школой, детским садом, мечетью и парком. Сдача — IV квартал 2026 года. Исламская рассрочка до{" "}
           {prices.months} месяцев.
         </p>
         <div data-reveal style={d(300)} className="mt-10 flex flex-wrap justify-center gap-4">
@@ -302,7 +303,7 @@ function Ticker() {
     "Сдача — IV квартал 2026",
     "Черновая отделка с перегородками",
     "Окна ПВХ",
-    "Рядом школа, мечеть и парк",
+    "Рядом школа, детский сад, мечеть и парк",
     "От 50 000 ₽ за м²",
   ];
   const row = [...items, ...items];
@@ -325,6 +326,7 @@ function Ticker() {
 function About() {
   const cards = [
     { icon: School, t: "Школа рядом", d: "Дети ходят на занятия без долгой дороги.", r: "-5deg" },
+    { icon: Blocks, t: "Детский сад рядом", d: "Малыша удобно отводить утром по пути на работу.", r: "0deg" },
     { icon: Mosque, t: "Мечеть рядом", d: "Молитва — в нескольких шагах от дома.", r: "4deg" },
     { icon: Door, t: "Черновая отделка", d: "Перегородки, окна ПВХ и железная дверь уже на месте.", r: "-4deg", blue: true },
     { icon: Tree, t: "Парк рядом", d: "Место для прогулок с семьёй и детьми.", r: "0deg" },
@@ -364,13 +366,13 @@ function About() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:flex lg:flex-col lg:items-center lg:gap-0">
           <div className="contents lg:flex lg:justify-center lg:gap-1">
-            {cards.slice(0, 2).map((c, i) => (
+            {cards.slice(0, 3).map((c, i) => (
               <Card key={c.t} c={c} i={i} />
             ))}
           </div>
           <div className="contents lg:-mt-3 lg:flex lg:justify-center lg:gap-1">
-            {cards.slice(2).map((c, i) => (
-              <Card key={c.t} c={c} i={i + 2} />
+            {cards.slice(3).map((c, i) => (
+              <Card key={c.t} c={c} i={i + 3} />
             ))}
           </div>
         </div>
@@ -610,12 +612,12 @@ function Location() {
               Всё нужное — <span className="text-gradient">рядом с домом</span>
             </>
           }
-          text="Тихий район Шелковской: школа, мечеть и парк в нескольких минутах пешком."
+          text="Тихий район Шелковской: школа, детский сад, мечеть и парк в нескольких минутах пешком."
         />
         <div className="grid gap-5 lg:grid-cols-[400px_1fr]">
           <div data-reveal className="card flex flex-col gap-6 p-7 md:p-8">
             <InfoRow icon={<Pin />} label="Адрес дома" value={company.objectAddress} />
-            <InfoRow icon={<Family />} label="Инфраструктура" value="Школа, мечеть, парк, детские и спортивные площадки во дворах" />
+            <InfoRow icon={<Family />} label="Инфраструктура" value="Школа, детский сад, мечеть, парк, детские и спортивные площадки во дворах" />
             <InfoRow icon={<Pin />} label="Офис продаж" value={company.officeAddress} />
             <InfoRow icon={<Clock />} label="Часы работы" value={`${company.hours}. ${company.daysOff}`} />
             <a

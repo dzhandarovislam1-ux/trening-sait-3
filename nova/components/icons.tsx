@@ -92,7 +92,15 @@ export const Mosque = ({ className = "size-6" }: P) => (
   </svg>
 );
 
-export const Tree = ({ className = "size-6" }: P) => (
+export const Blocks = ({ className = "size-6" }: P) => (
+  <svg {...base} className={className}>
+    <rect x="3" y="12" width="8" height="8" rx="1" />
+    <rect x="13" y="12" width="8" height="8" rx="1" />
+    <path d="M12 3.5 16.5 10h-9L12 3.5Z" />
+  </svg>
+);
+
+export const Tree =({ className = "size-6" }: P) => (
   <svg {...base} className={className}>
     <path d="M12 21v-6M8 17h8M12 3a5 5 0 0 0-4.6 7A4 4 0 0 0 9 17h6a4 4 0 0 0 1.6-7A5 5 0 0 0 12 3Z" />
   </svg>
