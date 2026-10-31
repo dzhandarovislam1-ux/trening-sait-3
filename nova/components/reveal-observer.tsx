@@ -5,6 +5,8 @@ import { useEffect } from "react";
 /** Adds `is-in` to every [data-reveal] element when it scrolls into view. */
 export function RevealObserver() {
   useEffect(() => {
+    // Re-assert: a client re-render of <html> can drop the class set by the inline script.
+    document.documentElement.classList.add("js");
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {

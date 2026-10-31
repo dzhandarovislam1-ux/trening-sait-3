@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   title: "ЖК «Новый Терек» — квартиры в Шелковской от застройщика СК «Терек»",
   description:
     "Квартиры от застройщика в ЖК «Новый Терек», г. Шелковская. Сдача IV квартал 2026. От 50 000 ₽/м², исламская рассрочка на 72 месяца, материнский капитал.",
+  // iOS Safari/Yandex auto-link phone numbers, which breaks hydration and wipes <html> classes.
+  formatDetection: { telephone: false, email: false, address: false, date: false },
   openGraph: {
     title: "ЖК «Новый Терек» — квартиры от застройщика",
     description: "Сдача IV квартал 2026. От 50 000 ₽/м². Исламская рассрочка на 72 месяца.",
