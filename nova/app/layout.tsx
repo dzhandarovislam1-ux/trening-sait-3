@@ -3,6 +3,7 @@ import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import { BASE } from "@/lib/data";
 import { CookieBanner } from "@/components/cookie-banner";
+import { JsonLd } from "@/components/json-ld";
 
 const display = Montserrat({
   variable: "--font-display",
@@ -18,14 +19,26 @@ const sans = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "https://novyterek.ru"),
-  title: "ЖК «Новый Терек» — квартиры в Шелковской от застройщика СК «Терек»",
+  title: "ЖК «Новый Терек» — купить квартиру в Шелковской от застройщика СК «Терек»",
   description:
-    "Квартиры от застройщика в ЖК «Новый Терек», г. Шелковская. Сдача IV квартал 2026. От 50 000 ₽/м², исламская рассрочка на 72 месяца, материнский капитал.",
+    "Квартиры в г. Шелковская от застройщика ЖК «Новый Терек». 1-, 2-, 3-комнатные квартиры в кирпичном доме. Сдача — IV квартал 2026 г. От 50 000 ₽/м², исламская рассрочка на 72 месяца, материнский капитал.",
+  keywords: [
+    "квартиры в Шелковской",
+    "купить квартиру в Шелковской",
+    "квартиры Шелковская",
+    "новостройки Шелковская",
+    "ЖК Новый Терек",
+    "Новый Терек Шелковская",
+    "СК Терек",
+    "квартиры от застройщика Шелковская",
+    "исламская рассрочка Шелковская",
+    "купить квартиру от застройщика Чечня",
+  ],
   // iOS Safari/Yandex auto-link phone numbers, which breaks hydration and wipes <html> classes.
   formatDetection: { telephone: false, email: false, address: false, date: false },
   openGraph: {
-    title: "ЖК «Новый Терек» — квартиры от застройщика",
-    description: "Сдача IV квартал 2026. От 50 000 ₽/м². Исламская рассрочка на 72 месяца.",
+    title: "ЖК «Новый Терек» — купить квартиру в Шелковской от застройщика",
+    description: "Сдача IV квартал 2026. От 50 000 ₽/м². Исламская рассрочка на 72 месяца. Кирпичный дом у школы и парка.",
     images: [{ url: `${BASE}/images/og.jpg`, width: 1200, height: 630, alt: "ЖК «Новый Терек» — вид на квартал с высоты" }],
     locale: "ru_RU",
     type: "website",
@@ -53,6 +66,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
       </head>
       <body>
+        <JsonLd />
         {children}
         <CookieBanner />
       </body>

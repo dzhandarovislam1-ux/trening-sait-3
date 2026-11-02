@@ -160,7 +160,7 @@ function Hero() {
           <span className="mt-3 block text-balance text-[0.6em] leading-[1.15]">Квартиры, в которых хочется жить</span>
         </h1>
         <p data-intro style={d(200)} className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-white/75">
-          Кирпичный дом рядом со школой, детским садом, мечетью и парком. Сдача — IV квартал 2026 года. Исламская рассрочка до{" "}
+          Кирпичный дом в Шелковской рядом со школой, детским садом, мечетью и парком. Сдача — IV квартал 2026 года. Исламская рассрочка до{" "}
           {prices.months} месяцев.
         </p>
         <div data-intro style={d(300)} className="mt-10 flex flex-wrap justify-center gap-4">
