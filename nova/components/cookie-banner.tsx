@@ -1,28 +1,34 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { BASE } from "@/lib/data";
 
 const KEY = "cookies-ok";
 
+const subscribe = (cb: () => void) => {
+  window.addEventListener("storage", cb);
+  return () => window.removeEventListener("storage", cb);
+};
+const readAccepted = () => {
+  try {
+    return localStorage.getItem(KEY) === "1";
+  } catch {
+    return false;
+  }
+};
+
 export function CookieBanner() {
-  const [show, setShow] = useState(false);
+  // Server snapshot is "accepted" so the banner never appears in static HTML.
+  const accepted = useSyncExternalStore(subscribe, readAccepted, () => true);
+  const [dismissed, setDismissed] = useState(false);
 
-  useEffect(() => {
-    try {
-      setShow(localStorage.getItem(KEY) !== "1");
-    } catch {
-      setShow(true);
-    }
-  }, []);
-
-  if (!show) return null;
+  if (accepted || dismissed) return null;
 
   const accept = () => {
     try {
       localStorage.setItem(KEY, "1");
     } catch {}
-    setShow(false);
+    setDismissed(true);
   };
 
   return (

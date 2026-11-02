@@ -17,6 +17,7 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL ?? "https://novyterek.ru"),
   title: "ЖК «Новый Терек» — квартиры в Шелковской от застройщика СК «Терек»",
   description:
     "Квартиры от застройщика в ЖК «Новый Терек», г. Шелковская. Сдача IV квартал 2026. От 50 000 ₽/м², исламская рассрочка на 72 месяца, материнский капитал.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ЖК «Новый Терек» — квартиры от застройщика",
     description: "Сдача IV квартал 2026. От 50 000 ₽/м². Исламская рассрочка на 72 месяца.",
-    images: [`${BASE}/images/aerial-front.webp`],
+    images: [{ url: `${BASE}/images/og.jpg`, width: 1200, height: 630, alt: "ЖК «Новый Терек» — вид на квартал с высоты" }],
     locale: "ru_RU",
     type: "website",
   },

@@ -21,6 +21,8 @@ export const company = {
   legalAddress:
     "366108, Чеченская Республика, Шелковской р-н, г. Шелковская, ул. Грейдерная, д. 20, корп. 2, помещ. 1",
   email: "ck.terek@yandex.ru",
+  rknRegNumber: "20-25-005718",
+  rknOrder: "приказ № 53 от 24.06.2025 г.",
 };
 
 export const permit = {
@@ -29,7 +31,7 @@ export const permit = {
   issuer: "Администрация Шелковского муниципального района Чеченской Республики",
 };
 
-export const legalUpdated = "31.10.2026";
+export const legalUpdated = "02.11.2026";
 
 export const prices = {
   cash: 50000,

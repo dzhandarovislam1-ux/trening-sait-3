@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
   env: { NEXT_PUBLIC_BASE_PATH: basePath },
   experimental: {
     agentFeedback: true,
+    turbopackPluginRuntimeStrategy: "forceWorkerThreads",
   },
   turbopack: {
     rules: {

@@ -11,7 +11,7 @@ export function LegalPage({ title, children }: { title: string; children: React.
       <p className="mt-3 text-sm text-muted">Редакция от {legalUpdated}</p>
       <div className="legal mt-10 space-y-8 text-[15px] leading-relaxed text-white/80">{children}</div>
       <p className="mt-14 border-t border-line pt-6 text-xs text-white/40">
-        © 2026 {company.legal}. ИНН {company.inn}, ОГРН {company.ogrn}.
+        © 2026 {company.legal}. ИНН {company.inn}, ОГРН {company.ogrn}. Оператор ПД в реестре Роскомнадзора: № {company.rknRegNumber}.
       </p>
     </main>
   );
@@ -33,6 +33,7 @@ export function Operator() {
     <ul className="list-disc space-y-1 pl-5">
       <li>{company.fullLegal} ({company.legal})</li>
       <li>ИНН {company.inn}, ОГРН {company.ogrn}</li>
+      <li>Реестр операторов персональных данных Роскомнадзора: рег. № {company.rknRegNumber} (основание: {company.rknOrder})</li>
       <li>Юридический адрес: {company.legalAddress}</li>
       <li>
         Email:{" "}

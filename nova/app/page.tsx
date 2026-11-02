@@ -826,6 +826,8 @@ function Footer() {
             </p>
             <p className="mt-3 leading-relaxed text-muted">
               Разрешение на строительство <span className="whitespace-nowrap">№ {permit.number}</span> от {permit.date}
+              <br />
+              Оператор ПД в реестре Роскомнадзора: <span className="whitespace-nowrap">№ {company.rknRegNumber}</span>
             </p>
           </div>
           <div>

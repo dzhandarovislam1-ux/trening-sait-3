@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://novyterek.ru/sitemap.xml
+Host: https://novyterek.ru
