@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   ],
   // iOS Safari/Yandex auto-link phone numbers, which breaks hydration and wipes <html> classes.
   formatDetection: { telephone: false, email: false, address: false, date: false },
+  verification: {
+    yandex: "90dbee2d22e9c702",
+  },
   openGraph: {
     title: "ЖК «Новый Терек» — купить квартиру в Шелковской от застройщика",
     description: "Сдача IV квартал 2026. От 50 000 ₽/м². Исламская рассрочка на 72 месяца. Кирпичный дом у школы и парка.",
